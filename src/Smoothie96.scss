@@ -262,6 +262,44 @@ hr {
     }
 }
 
+.titlebar-closebutton,
+.titlebar-maxbutton,
+.titlebar-minbutton {
+    @include ButtonGlass;
+
+    width: 15px;
+    height: 15px;
+    min-width: 15px;
+    padding: 0;
+    box-sizing: border-box;
+    top: 1px;
+    left: unset;
+    margin-left: 2px;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAPBAMAAACCUFuUAAAAFVBMVEUAAAD///////////////////////9Iz20EAAAABnRSTlMAYBjk4DC0dbSQAAAAN0lEQVQY02OgG2BLS0sD0YwKiljFxVzNBFDEQQgIlNNSFLCJs6alMuBSDzMYJg4zHyaO7h7aAwDoLAotbuDgUgAAAABJRU5ErkJggg==")
+    }
+}
+
+.titlebar-maxbutton {
+    &::after {
+        background-position-x: calc(-15px * 1);
+    }
+}
+
+.titlebar-closebutton {
+    &::after {
+        background-position-x: calc(-15px * 2);
+    }
+}
+
 .w96-textbox,
 input[type="text"],
 .cdlg-ofd .exp-file-view,
